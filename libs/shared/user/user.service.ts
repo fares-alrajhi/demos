@@ -1,11 +1,10 @@
-import { Injectable, NgModule } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { UserDetails, LoginResponse } from '../../api/user/src/lib/user-details.interface';
 import { Observable, BehaviorSubject, tap, catchError, throwError } from 'rxjs';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 import { LocalstorageService } from './localStorage';
-
 
 export const snackbarConfig: MatSnackBarConfig = {
   duration: 3000,

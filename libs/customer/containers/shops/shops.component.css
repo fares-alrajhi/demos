@@ -4,3 +4,11 @@
 .mat-grid-tile {
     border: solid 1px #a9a9a9;
 }
+
+.card {
+    z-index: 1; text-align: center;     z-index: 1;
+    text-align: center;
+    background-color: darkslategray;
+    opacity: 0.75;
+    height: 100%;
+}

@@ -4,34 +4,20 @@
         "name": "zara",
         "displayName": "Zara",
         "description": "Zara sells clothing, accessories, beauty products and perfumes",
-        "imageUrl": "https://th.bing.com/th/id/OIP.ef9bPyK4W3B_F96dYTut9wHaE7?rs=1&pid=ImgDetMain"
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Zara_Storefront_%2848155639387%29.jpg/520px-Zara_Storefront_%2848155639387%29.jpg"
     },
     {
-        "id": 1,
-        "name": "zara",
-        "displayName": "Zara",
-        "description": "Zara sells clothing, accessories, beauty products and perfumes",
-        "imageUrl": "https://th.bing.com/th/id/OIP.ef9bPyK4W3B_F96dYTut9wHaE7?rs=1&pid=ImgDetMain"
+        "id": 2,
+        "name": "nike",
+        "displayName": "NIKE",
+        "description": "Nike produces a wide range of sports equipment and apparel",
+        "imageUrl": "https://www.nike.sa/on/demandware.static/-/Library-Sites-NikeSharedLibrary/default/dw9c9fd678/images/global/logo.svg"
     },
     {
-        "id": 1,
-        "name": "zara",
-        "displayName": "Zara",
-        "description": "Zara sells clothing, accessories, beauty products and perfumes",
-        "imageUrl": "https://th.bing.com/th/id/OIP.ef9bPyK4W3B_F96dYTut9wHaE7?rs=1&pid=ImgDetMain"
-    },
-    {
-        "id": 1,
-        "name": "zara",
-        "displayName": "Zara",
-        "description": "Zara sells clothing, accessories, beauty products and perfumes",
-        "imageUrl": "https://th.bing.com/th/id/OIP.ef9bPyK4W3B_F96dYTut9wHaE7?rs=1&pid=ImgDetMain"
-    },
-    {
-        "id": 1,
-        "name": "zara",
-        "displayName": "Zara",
-        "description": "Zara sells clothing, accessories, beauty products and perfumes",
-        "imageUrl": "https://th.bing.com/th/id/OIP.ef9bPyK4W3B_F96dYTut9wHaE7?rs=1&pid=ImgDetMain"
+        "id": 3,
+        "name": "hm",
+        "displayName": "H&M",
+        "description": "H & M Hennes & Mauritz AB, commonly known by its brand name H&M, is a multinational fashion retailer",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/250px-H%26M-Logo.svg.png"
     }
     ]

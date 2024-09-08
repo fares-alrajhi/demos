@@ -6,9 +6,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import {BehaviorSubject} from 'rxjs';
 import { LocalstorageService } from '../../../../libs/shared/user/localStorage';
-import { AuthReducer } from '../../../../libs/shared/user/state/auth.reducer';
-import { AUTH_STATE_NAME } from '../../../../libs/shared/user/state/auth.selector';
-import { StoreModule } from '@ngrx/store';
 
 
 @Component({

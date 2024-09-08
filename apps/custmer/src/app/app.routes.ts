@@ -5,7 +5,6 @@ import { ShopsComponent } from '../../../../libs/customer/containers/shops/shops
 import { UserAuthGuard } from '../../../../libs/shared/user/auth.guard';
 import { LoggedInGuard } from '../../../../libs/shared/user/loggedin.guard';
 
-
 export const appRoutes: Route[] = [
     { 
         path: '', 

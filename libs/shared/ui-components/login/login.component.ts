@@ -8,9 +8,6 @@ import { Router, RouterModule } from '@angular/router';
 import {MatSelectModule } from '@angular/material/select';
 import { UserService } from '../../user/user.service';
 import { tap } from 'rxjs';
-import { StoreModule, StoreFeatureModule } from '@ngrx/store';
-import { AUTH_STATE_NAME } from '../../user/state/auth.selector';
-import { AuthReducer } from '../../user/state/auth.reducer';
 
 
 
@@ -34,8 +31,6 @@ import { AuthReducer } from '../../user/state/auth.reducer';
     MatSelectModule,
     ReactiveFormsModule,
     CommonModule,
-    StoreFeatureModule.call(AUTH_STATE_NAME, AuthReducer),
-
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
