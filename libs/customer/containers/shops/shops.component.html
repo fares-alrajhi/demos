@@ -1,0 +1,21 @@
+
+
+<mat-grid-list id="shops-list" cols="4" rowHeight="2:1" [gutterSize]="'20px'">
+    <h3>Choose a shop</h3>
+    <br/>
+    <mat-grid-tile style="display: block;" *ngFor="let shop of shops">
+        <div style="z-index: 1; text-align: center;">
+            <h3 style="text-align: center; color: floralwhite;">{{shop.displayName}}</h3>
+            <div style="
+            color: cornsilk;
+            font-family: emoji;
+            font-style: italic;">{{shop.description}}</div>
+        </div>
+        <img style="position: absolute;
+        display: block;
+        width: 100%;
+        filter: blur(1px) brightness(0.5);
+        height: 100%;" layout-fill src="{{shop.imageUrl}}"/>
+    </mat-grid-tile>
+  </mat-grid-list>
+  
