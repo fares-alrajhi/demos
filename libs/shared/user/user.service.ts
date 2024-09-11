@@ -5,6 +5,7 @@ import { UserDetails, LoginResponse } from '../../api/user/src/lib/user-details.
 import { Observable, BehaviorSubject, tap, catchError, throwError } from 'rxjs';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 import { LocalstorageService } from './localStorage';
+import { environment } from '../../../apps/custmer/environments/environment';
 
 export const snackbarConfig: MatSnackBarConfig = {
   duration: 3000,
@@ -20,14 +21,14 @@ export class UserService {
   constructor(
     private httpClient: HttpClient,
     private snackbar: MatSnackBar,
-    private localStorage: LocalstorageService
+    private localStorage: LocalstorageService,
   ) { }
 
   user = new BehaviorSubject<UserDetails>(null!);
 
   login(user: object): Observable<LoginResponse>{
 
-    return this.httpClient.post<LoginResponse>(`${process.env.AUTH_API_URI}/login`, user).pipe(
+    return this.httpClient.post<LoginResponse>(`${environment.apiAuthUrl}/login`, user).pipe(
       tap((res: LoginResponse) => {
         console.log("res = ", res);
     
@@ -43,7 +44,9 @@ export class UserService {
   }
 
   register(user: object): Observable<UserDetails>{
-    return this.httpClient.post<UserDetails>(`${process.env.AUTH_API_URI}/register`, user).pipe(
+    console.log("environment = ", environment);
+    
+    return this.httpClient.post<UserDetails>(`${environment.apiAuthUrl}/register`, user).pipe(
       tap((createdUser: UserDetails) => this.snackbar.open(`User ${createdUser.name} ws created successfully`, 'Close', snackbarConfig)),
       catchError(e => {        
         this.snackbar.open(`Error creating user because: ${e.error?.message}`, 'Close', snackbarConfig);

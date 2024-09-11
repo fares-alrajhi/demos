@@ -18,7 +18,8 @@ import { ConfigService } from '@nestjs/config';
           },
           global: true,
         }
-    },inject: [ConfigService]
+    },
+    inject: [ConfigService]
   })
   ],
   controllers: [AuthController],
