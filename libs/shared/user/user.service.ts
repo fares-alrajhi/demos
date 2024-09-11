@@ -27,7 +27,7 @@ export class UserService {
 
   login(user: object): Observable<LoginResponse>{
 
-    return this.httpClient.post<LoginResponse>('http://localhost:3000/api/auth/login', user).pipe(
+    return this.httpClient.post<LoginResponse>(`${process.env.AUTH_API_URI}/login`, user).pipe(
       tap((res: LoginResponse) => {
         console.log("res = ", res);
     
@@ -43,7 +43,7 @@ export class UserService {
   }
 
   register(user: object): Observable<UserDetails>{
-    return this.httpClient.post<UserDetails>('http://localhost:3000/api/auth/register', user).pipe(
+    return this.httpClient.post<UserDetails>(`${process.env.AUTH_API_URI}/register`, user).pipe(
       tap((createdUser: UserDetails) => this.snackbar.open(`User ${createdUser.name} ws created successfully`, 'Close', snackbarConfig)),
       catchError(e => {        
         this.snackbar.open(`Error creating user because: ${e.error?.message}`, 'Close', snackbarConfig);
