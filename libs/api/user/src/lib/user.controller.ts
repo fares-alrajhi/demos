@@ -16,11 +16,9 @@ export class UserController {
         @ReqHeader(
             new ValidationPipe({ validateCustomDecorators: true})
         ) header: HeadersDto) {
-            
+
             this.logger.verbose(`User with id ${id} retrieving profile`);
 
             return this.userService.findById(id, header['access-token']);
     }
-
-    // add logout and expire token in the SB
 }
