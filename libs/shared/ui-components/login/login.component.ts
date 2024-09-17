@@ -8,6 +8,8 @@ import { Router, RouterModule } from '@angular/router';
 import {MatSelectModule } from '@angular/material/select';
 import { UserService } from '../../user/user.service';
 import { tap } from 'rxjs';
+import {Store} from "@ngrx/store";
+import { Login } from 'libs/customer/store/actions/user.actions';
 
 
 
@@ -42,18 +44,13 @@ export class LoginComponent{
     password: new FormControl(null, [Validators.required])
   });
 
-  constructor(private userService: UserService,private router: Router) {
+  constructor(private userService: UserService,private router: Router, private store: Store) {
     
   }
 
   login() {
     if (this.form.valid) {
-      this.userService.login({
-        email: this.email.value,
-        password: this.password.value
-      }).pipe(
-        tap(() => this.router.navigate(['/home']))
-      ).subscribe();
+      this.store.dispatch(Login({email: this.email.value, password: this.password.value}));
     }
   }
 

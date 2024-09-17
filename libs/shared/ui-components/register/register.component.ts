@@ -9,6 +9,8 @@ import { CustomValidators } from '../../validators/custom-validators';
 import { Router, RouterModule } from '@angular/router';
 import { tap } from 'rxjs';
 import { UserService } from '../../user/user.service';
+import { Store } from '@ngrx/store';
+import { Register } from 'libs/customer/store/actions/user.actions';
 
 
 
@@ -41,17 +43,12 @@ export class RegisterComponent {
     validators: CustomValidators.passwordsMatching
   })
 
-  constructor(private userService: UserService,private router: Router) {}
+  constructor(private store: Store) {}
 
   register() {
     if (this.form.valid) {
-      this.userService.register({
-        name: this.name.value,
-        email: this.email.value,
-        password: this.password.value
-      }).pipe(
-        tap(() => this.router.navigate(['/login']))
-      ).subscribe();
+      this.store.dispatch(Register({name: this.name.value, email: this.email.value, password: this.password.value}));
+
     }
   }
 

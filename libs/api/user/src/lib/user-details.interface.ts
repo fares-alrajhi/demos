@@ -5,7 +5,9 @@ export interface UserDetails {
 }
 
 export interface LoginResponse {
+    error: boolean;
+    status: string;
     token: string;
-    token_type: string;
+    name: string;
     expires_in: number;
 }
