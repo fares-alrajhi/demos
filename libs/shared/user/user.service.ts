@@ -83,8 +83,8 @@ export class UserService {
             this.snackbar.open(`Error creating user!!`, 'Close', snackbarConfig);
           }
         }
-        else {
-          this.snackbar.open(`User ${createdUser.name} was created successfully`, 'Close', snackbarConfig)
+        else {          
+          this.snackbar.open(`User ${createdUser.user.name} was created successfully`, 'Close', snackbarConfig)
         }
       }),
       catchError(e => {        
