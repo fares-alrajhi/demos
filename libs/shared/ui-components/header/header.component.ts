@@ -29,22 +29,23 @@ import { LocalstorageService } from 'libs/shared/user/localStorage';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent  {
 
   @ViewChild(MatMenuTrigger)
   trigger!: MatMenuTrigger;
 
-  name = ''
 
-  constructor(private localStorage: LocalstorageService, private store: Store<AppState>, private userService: UserService ,private readonly location: Location, private router: Router) {
-    
-  }
-  ngOnInit(): void {
-    this.setName();  
-  }
 
-  async setName() {
-    this.name = JSON.parse(this.localStorage.getItem('customer'))?.name;    
+  constructor(
+    private localStorage: LocalstorageService, 
+    private store: Store<AppState>, 
+    private userService: UserService,
+    private readonly location: Location, 
+    private router: Router) {}
+
+
+  getName() {
+    return JSON.parse(this.localStorage.getItem('customer'))?.name;
   }
 
   isAuthenticated() {

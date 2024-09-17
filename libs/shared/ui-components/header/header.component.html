@@ -25,7 +25,7 @@
             <li *ngIf = 'isAuthenticated()' class="nav-item">
               <a style="cursor: pointer;" class="nav-link active" [matMenuTriggerFor]="menu">Accout</a>
               <mat-menu #menu="matMenu">
-                <button disabled mat-menu-item>{{name}}</button>
+                <button disabled mat-menu-item>{{getName()}}</button>
                 <button *ngIf = 'isAuthenticated()' (click)="logout()" aria-current="page" mat-menu-item>Log Out</button>
               </mat-menu>
             </li>
