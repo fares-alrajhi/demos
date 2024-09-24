@@ -14,7 +14,16 @@ prerequisites (install):
  All you need is apinning up the following 
  - front-end "custmer" ```nx serve custmer ```
  - back-end "api" ```nx serve api ```
- - Mongodb "DB" ```brew services restart mongodb-community ```
+ - Mongodb "DB": can either be run and connected locally using Port ```27017 ``` ```brew services restart mongodb-community ```
+   Or configure MONGODB_CONNECTION_STRING in .env file to use remote cluster.
 
-   Note: DB is configured to be using Port ```27017 ```
-
+   ENV
+   ```
+    JWT_SECRET="secret"
+    JWT_EXPIREIN="8h"
+    
+    NODE_ENV=development
+    
+    MONGODB_CONNECTION_STRING=MONGO URL 
+   ```
+   
